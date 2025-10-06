@@ -1,0 +1,23 @@
+[project]
+name = "Neurodivergente-Backend"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "Fabrica-da-resenha", email = "fabrica.resenha.idmfabio@gmail.com"},
+]
+dependencies = ["django>=5.2.7"]
+requires-python = "==3.13.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
+
+[tool.pdm.scripts]
+dev = "python src/manage.py runserver"
+createsuperuser = "python src/manage.py createsuperuser"
+pre_migrate = "python src/manage.py makemigrations"
+migrate = "python src/manage.py migrate"
+shell = "python src/manage.py shell"
+test = "python src/manage.py test"
