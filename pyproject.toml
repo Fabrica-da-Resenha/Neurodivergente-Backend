@@ -16,7 +16,10 @@ version = "0.1.0"
 description = ""
 authors = ["Fabrica-da-Resenha <fabrica.resenha.idmfabio@gmail.com>"]
 readme = "README.md"
-packages = [{ include = "neurodivergente", from= "src" }]
+packages = [
+    { include = "config", from = "src" },
+    { include = "core", from = "src" },
+]
 
 [tool.pdm]
 distribution = false
