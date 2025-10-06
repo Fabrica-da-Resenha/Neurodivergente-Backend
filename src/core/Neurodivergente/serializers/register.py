@@ -13,7 +13,7 @@ class UserCreateserializer(serializers.ModelSerializer):
         email = validated_data['email']
         password = validated_data['password']
 
-        user = User.objects.create(
+        user = User.objects.create_user(
             username=username,
             email=email,
             password=password
