@@ -78,4 +78,4 @@ class UserRegistrationAPITest(APITestCase):
         
         # Verifica se a mensagem de erro específica para o campo password foi retornada
         self.assertIn('password', response.data)
-        self.assertEqual(str(response.data['password'][0]), 'This field is required.')
+        self.assertEqual(str(response.data['password'][0]), 'Este campo é obrigatório.')

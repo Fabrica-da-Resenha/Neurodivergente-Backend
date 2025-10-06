@@ -1,0 +1,1 @@
+from .register import criar_usuario_api
