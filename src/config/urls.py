@@ -16,9 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from rest_framework_simplejwt.views import TokenRefreshView
 from core.Neurodivergente import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/register/', views.criar_usuario_api, name="api-register")
+    path('api/register/', views.criar_usuario_api, name="api-register"),
+    path('api/login/', views.login_usuario_api, name='login'), # <-- ADICIONE ESTA LINHA
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]
