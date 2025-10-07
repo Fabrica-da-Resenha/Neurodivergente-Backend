@@ -6,8 +6,8 @@ from core.Neurodivergente.serializers import UserCreateserializer
 
 
 
-@api_view(['POST']) # O decorator @api_view define quais métodos HTTP esta view aceita.
-@permission_classes([AllowAny]) # @permission_classes diz que qualquer um (mesmo não logado) pode acessar esta view.
+@api_view(['POST'])
+@permission_classes([AllowAny])
 def criar_usuario_api(request):
     """ Endpoint da API para criar um novo usuário. """
 
@@ -24,6 +24,6 @@ def criar_usuario_api(request):
         }
         
         return Response(response_data, status=status.HTTP_201_CREATED)
-    else:
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     

@@ -42,10 +42,6 @@ INSTALLED_APPS = [
     'core.Neurodivergente',
 ]
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000", # Porta padrão do React
-    "http://127.0.0.1:3000",
-]
 ALLOWED_HOSTS = ['*']
 
 MIDDLEWARE = [
@@ -130,3 +126,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CORS_ALLOW_ALL_ORIGINS = True
