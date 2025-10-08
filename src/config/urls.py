@@ -22,6 +22,6 @@ from core.Neurodivergente import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/register/', views.criar_usuario_api, name="api-register"),
-    path('api/login/', views.login_usuario_api, name='login'), # <-- ADICIONE ESTA LINHA
+    path('api/login/', views.login_usuario_api, name='api-login'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]
