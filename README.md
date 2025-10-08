@@ -4,7 +4,7 @@ Neurodivergente é a nova rede social que somente os mais seniors do ifc araquar
 <br>
 casal meloso no ponto?<br>
 -tira uma foto e posta criticando<br>
-O viado do andré ta mais viado que o normal?<br>
+( tomamos censuraaaaa )<br>
 -posta que nois curti e ainda critica ele nos comentarios<br>
 <br>
 Não há motivo para não utilizar, acesse agora<br>
