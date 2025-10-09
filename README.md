@@ -2,11 +2,6 @@
 
 Neurodivergente é a nova rede social que somente os mais seniors do ifc araquari vão utilizar<br>
 <br>
-casal meloso no ponto?<br>
--tira uma foto e posta criticando<br>
-( tomamos censuraaaaa )<br>
--posta que nois curti e ainda critica ele nos comentarios<br>
-<br>
-Não há motivo para não utilizar, acesse agora<br>
+Censura no readme inteiro se não o projeto cai antes mesmo de existir, vlw
 <br>
 Neurodivergente.site
