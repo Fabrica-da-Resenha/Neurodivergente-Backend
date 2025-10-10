@@ -15,13 +15,22 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from rest_framework_simplejwt.views import TokenRefreshView
 from core.Neurodivergente import views
+
+#Imports apenas para caso de ( DEBUG = True )
+from django.conf import settings
+from django.conf.urls.static import static
+from .router import router
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/register/', views.criar_usuario_api, name="api-register"),
     path('api/login/', views.login_usuario_api, name='api-login'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('api/', include(router.urls)),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

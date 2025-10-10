@@ -14,7 +14,7 @@ def criar_usuario_api(request):
     serializer = UserCreateserializer(data=request.data)
     
     if serializer.is_valid():
-        user = serializer.save()
+        user = serializer.save(user=request.user)
         
         response_data = {
             'message': 'Usuário criado com sucesso!',
