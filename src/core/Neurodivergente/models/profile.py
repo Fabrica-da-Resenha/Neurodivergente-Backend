@@ -1,11 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-import random
-
-def get_default_profile_pic():
-    pics = ["autismo.png", "tdah.png", "sonic.png"]
-    return "profile_pics/" + random.choice(pics)
-# ----------------------------------- #
 
 class Gender(models.TextChoices):
     feminino = "F", "Feminino"
@@ -31,11 +25,10 @@ class Profile(models.Model):
     
     profile_picture = models.ImageField(
         upload_to='profile_pics/',
-        default='profile_pics/' + str(get_default_profile_pic),
         null=True,
         blank=True
     )
-    
+
     @property
     def followers(self):
         return User.objects.filter(
@@ -45,7 +38,7 @@ class Profile(models.Model):
     @property
     def following(self):
         return User.objects.filter(
-            followers__user_follow=self.user 
+            followers__user_follow=self.user
         )
     
     class Meta:
