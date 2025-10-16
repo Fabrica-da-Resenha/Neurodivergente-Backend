@@ -37,10 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'core.Neurodivergente',
     'rest_framework',
     'rest_framework_simplejwt',
     'corsheaders',
-    'core.Neurodivergente',
 ]
 
 ALLOWED_HOSTS = ['*']
@@ -140,3 +140,9 @@ SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=5),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
 }
+
+# URL base para servir os arquivos de mídia enviados pelos usuários
+MEDIA_URL = '/media/'
+
+# Caminho no sistema de arquivos onde os arquivos de mídia serão armazenados
+MEDIA_ROOT = BASE_DIR / 'core/media'

@@ -5,6 +5,7 @@ from rest_framework.permissions import AllowAny
 from rest_framework_simplejwt.tokens import RefreshToken
 from core.Neurodivergente.serializers import UserLoginSerializer
 from django.contrib.auth import authenticate
+from core.Neurodivergente.models import Profile
 
 @api_view(['POST'])
 @permission_classes([AllowAny])
@@ -24,9 +25,12 @@ def login_usuario_api(request):
     if user is not None:
         refresh = RefreshToken.for_user(user)
 
+        has_profile = Profile.objects.filter(user=user).exists()
+
         response_data = {
             'refresh': str(refresh),
             'access': str(refresh.access_token),
+            'has_profile': has_profile
         }
         return Response(response_data, status=status.HTTP_200_OK)
     else:
